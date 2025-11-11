@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 
-// Replace <your_password> with the password for user 'inotebook_user'
-const mongoURI = "mongodb+srv://inotebook_user:YourPassword@cluster0.oiz6o30.mongodb.net/inotebook?retryWrites=true&w=majority";
+// ⚠️ Replace <YourPassword> with the password for the user 'inotebook_user'
+// The database name is 'inotebook'
+const mongoURI = "mongodb+srv://inotebook_user:vcGZheEL6oCEvZWE@cluster0.oiz6o30.mongodb.net/inotebook?retryWrites=true&w=majority";
 
 const connectToMongo = async () => {
     try {
@@ -9,9 +10,8 @@ const connectToMongo = async () => {
         console.log("✅ Connected to Mongo Successfully");
     } catch (error) {
         console.error("❌ Mongo connection failed:", error);
-        process.exit(1);
+        process.exit(1); // stops app if DB fails
     }
 };
 
 module.exports = connectToMongo;
-
