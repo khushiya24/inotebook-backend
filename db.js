@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-// ⚠️ Replace <username>, <password>, <cluster-url> with your Atlas info
-const mongoURI = "mongodb+srv://<username>:<password>@<cluster-url>/inotebook?retryWrites=true&w=majority";
+// Replace <your_password> with the password for user 'inotebook_user'
+const mongoURI = "mongodb+srv://inotebook_user:YourPassword@cluster0.oiz6o30.mongodb.net/inotebook?retryWrites=true&w=majority";
 
 const connectToMongo = async () => {
     try {
@@ -9,7 +9,7 @@ const connectToMongo = async () => {
         console.log("✅ Connected to Mongo Successfully");
     } catch (error) {
         console.error("❌ Mongo connection failed:", error);
-        process.exit(1); // stop the app if DB fails
+        process.exit(1);
     }
 };
 
