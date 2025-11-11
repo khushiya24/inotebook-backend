@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-const mongoURI = "mongodb://localhost:27017/inotebook"; // DB name included
+// ⚠️ Replace <username>, <password>, <cluster-url> with your Atlas info
+const mongoURI = "mongodb+srv://<username>:<password>@<cluster-url>/inotebook?retryWrites=true&w=majority";
 
 const connectToMongo = async () => {
     try {
